@@ -145,6 +145,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WeRdevs"
+    }
+  },
+  "defaultProject": "WeRdevs",
+  "cli": {
+    "analytics": false
+  }
 }

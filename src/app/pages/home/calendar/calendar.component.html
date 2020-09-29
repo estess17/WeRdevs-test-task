@@ -1,0 +1,50 @@
+<div class="calendar">
+  <div class="month">
+    <i class="fas fa-angle-left prev" (click)="prev()"></i>
+    <div class="date">
+      <h1>{{months[date.getMonth()]}} {{date.getFullYear()}}</h1>
+    </div>
+    <i class="fas fa-angle-right next" (click)="next()"></i>
+  </div>
+  <div class="days">
+    <div class="prev-date" *ngFor="let day of prevDays">
+      {{day}}
+    </div>
+    <div class="today" *ngIf="today">
+      {{today}}
+    </div>
+    <div *ngFor="let day of days" (click)="selectDate(day)">
+      {{day}}
+    </div>
+    <div class="next-date" *ngFor="let day of nextDay">
+      {{day}}
+    </div>
+  </div>
+  <div class="weekdays">
+    <div>S</div>
+    <div>M</div>
+    <div>T</div>
+    <div>W</div>
+    <div>T</div>
+    <div>F</div>
+    <div>S</div>
+  </div>
+</div>
+
+<div class="popup" *ngIf="showPopup">
+  <div class="overlay">
+    <div class="content">
+      <button class="close-btn" (click)="showPopup = false">&times;</button>
+      <div class="inputs">
+        <div>
+          Month <br>
+          <input type="text" [ngModel]="popupMonth">
+        </div>
+        <div>
+          Day <br>
+          <input type="text" [ngModel]="popupDay">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

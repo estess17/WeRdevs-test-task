@@ -1,0 +1,22 @@
+.about {
+  max-width: 1336px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  &-title {
+    color: #3D3D3D;
+    font-size: 34px;
+    margin-bottom: 60px;
+    letter-spacing: -0.68px;
+    font-weight: 700;
+  }
+
+  &-desc {
+    margin-bottom: 20px;
+    color: #3D3D3D;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 36px;
+  }
+}
